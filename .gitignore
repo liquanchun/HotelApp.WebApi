@@ -260,4 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 
-KTWD.Hotel-App.Models/HotelContext.cs
+HotelContext.cs
