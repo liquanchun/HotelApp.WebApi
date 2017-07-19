@@ -4,22 +4,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using KTWD.Hotel_App.Models;
+using KTWD.Hotel_App.Services;
 
 namespace KTWD.Hotel_App.WebApi.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private HotelContext DbContext { get; set; }
+        public ValuesController(HotelContext dbContext)
+        {
+            DbContext = dbContext;
+        }
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            using (var context = new HotelContext())
-            {
-                var role = context.SysRole.First();
-                return new string[] { role.role_name, role.role_desc };
-            }
-            return new string[] { "value1", "value2"};
+            var _roleService = new SysRole(DbContext);
+            
+            return new string[] { "value1", "value2",_roleService.GetRoleById().role_name};
         }
 
         // GET api/values/5

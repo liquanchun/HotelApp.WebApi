@@ -7,9 +7,10 @@ namespace KTWD.Hotel_App.Models
 {
     public class HotelContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public HotelContext(DbContextOptions<HotelContext> options)
+            : base(options)
         {
-            optionsBuilder.UseMySQL("server=127.0.0.1;database=hotel-app;uid=root;pwd=1234;charset=utf8;pooling=true;SslMode=None");
+
         }
         //public DbSet<sys_user> SysUsers { get; set; }
         //public DbSet<sys_function> SysFunctions { get; set; }

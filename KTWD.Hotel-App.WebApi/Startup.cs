@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using MySQL.Data.EntityFrameworkCore.Extensions;
+using KTWD.Hotel_App.Models;
 
 namespace KTWD.Hotel_App.WebApi
 {
@@ -27,6 +30,9 @@ namespace KTWD.Hotel_App.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<HotelContext>(options =>
+                   options.UseMySQL(Configuration.GetConnectionString("ConnString")));
+
             // Add framework services.
             services.AddMvc();
         }

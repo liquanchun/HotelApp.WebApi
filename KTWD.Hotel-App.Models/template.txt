@@ -1,0 +1,28 @@
+﻿<#@ template language="c#" HostSpecific="True" #>
+<#@ output extension= ".cs" #>
+<#
+	TableHost host = (TableHost)(Host);
+	host.Fieldlist.Sort(CodeCommon.CompareByintOrder);
+#>
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+namespace KTWD.Hotel_App.Models.SYS
+{
+ 	[Table("<#= host.TableName #>")]
+	public class <#= host.GetModelClass(host.TableName) #>
+	{   		     
+      	<# int i = 0;foreach (ColumnInfo c in host.Fieldlist)
+		{ #>/// <summary>
+		/// <#= string.IsNullOrEmpty(c.Description) ? c.ColumnName : c.Description #>
+        /// </summary>		
+        <# if( i == 0) {#>
+	 	[Key]
+	 	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		<# } #>
+        public <#= CodeCommon.DbTypeToCS(c.TypeName) #> <#= c.ColumnName #>{ get; set; }     
+		<# i++ ;} #>
+   
+	}
+}
+
