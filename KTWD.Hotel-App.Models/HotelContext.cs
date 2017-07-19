@@ -9,7 +9,7 @@ namespace KTWD.Hotel_App.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=127.0.0.1;database=hotel-app;uid=root;pwd=1234;charset=utf8;pooling=true;SslMode=None");
+            optionsBuilder.UseMySQL("server=120.25.151.96;database=hotel-app;uid=root;pwd=qwer1234;charset=utf8;pooling=true;SslMode=None");
         }
         //public DbSet<sys_user> SysUsers { get; set; }
         //public DbSet<sys_function> SysFunctions { get; set; }
