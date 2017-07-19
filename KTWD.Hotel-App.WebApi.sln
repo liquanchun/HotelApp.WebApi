@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KTWD.Hotel-App.WebApi", "KTWD.Hotel-App.WebApi\KTWD.Hotel-App.WebApi.csproj", "{80A5F3FC-482C-42B4-AF3F-4180B90C2045}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KTWD.Hotel-App.Models", "KTWD.Hotel-App.Models\KTWD.Hotel-App.Models.csproj", "{2EDBF303-E273-4F14-AECE-A832F1850A46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KTWD.Hotel-App.Services", "KTWD.Hotel-App.Services\KTWD.Hotel-App.Services.csproj", "{819A6C20-7223-4861-AF3F-48C2624FDA4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KTWD.Hotel-App.Common", "KTWD.Hotel-App.Common\KTWD.Hotel-App.Common.csproj", "{650A3FC9-6B75-4CF0-B297-0D86A98FE867}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80A5F3FC-482C-42B4-AF3F-4180B90C2045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A5F3FC-482C-42B4-AF3F-4180B90C2045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A5F3FC-482C-42B4-AF3F-4180B90C2045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A5F3FC-482C-42B4-AF3F-4180B90C2045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EDBF303-E273-4F14-AECE-A832F1850A46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EDBF303-E273-4F14-AECE-A832F1850A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EDBF303-E273-4F14-AECE-A832F1850A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EDBF303-E273-4F14-AECE-A832F1850A46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{819A6C20-7223-4861-AF3F-48C2624FDA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819A6C20-7223-4861-AF3F-48C2624FDA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819A6C20-7223-4861-AF3F-48C2624FDA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819A6C20-7223-4861-AF3F-48C2624FDA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650A3FC9-6B75-4CF0-B297-0D86A98FE867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650A3FC9-6B75-4CF0-B297-0D86A98FE867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650A3FC9-6B75-4CF0-B297-0D86A98FE867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650A3FC9-6B75-4CF0-B297-0D86A98FE867}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
