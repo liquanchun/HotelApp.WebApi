@@ -12,7 +12,7 @@ namespace KTWD.Hotel_App.Models
         {
 
         }
-        //public DbSet<sys_user> SysUsers { get; set; }
+        public DbSet<sys_user> SysUsers { get; set; }
         //public DbSet<sys_function> SysFunctions { get; set; }
         //public DbSet<sys_menu> SysMenus { get; set; }
         //public DbSet<sys_org> SysOrgs { get; set; }
