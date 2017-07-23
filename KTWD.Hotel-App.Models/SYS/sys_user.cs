@@ -3,60 +3,58 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace KTWD.Hotel_App.Models.SYS
 {
- 	[Table("sys_user")]
-	public class sys_user
-	{   		     
-      	/// <summary>
-		/// user_id
+    [Table("sys_user")]
+    public class sys_user
+    {
+        /// <summary>
+        /// user_id
         /// </summary>		
-        	 	[Key]
-	 	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-		        public string user_id{ get; set; }     
-		/// <summary>
-		/// user_name
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public string user_id { get; set; }
+        /// <summary>
+        /// user_name
         /// </summary>		
-                public string user_name{ get; set; }     
-		/// <summary>
-		/// mobile
+        public string user_name { get; set; }
+        /// <summary>
+        /// mobile
         /// </summary>		
-                public string mobile{ get; set; }     
-		/// <summary>
-		/// weixin
+        public string mobile { get; set; }
+        /// <summary>
+        /// weixin
         /// </summary>		
-                public string weixin{ get; set; }     
-		/// <summary>
-		/// email
+        public string weixin { get; set; }
+        /// <summary>
+        /// email
         /// </summary>		
-                public string email{ get; set; }     
-		/// <summary>
-		/// pwd
+        public string email { get; set; }
+        /// <summary>
+        /// pwd
         /// </summary>		
-                public string pwd{ get; set; }     
-		/// <summary>
-		/// last_login_time
+        public string pwd { get; set; }
+        /// <summary>
+        /// last_login_time
         /// </summary>		
-                public string last_login_time{ get; set; }     
-		/// <summary>
-		/// org_id
+        public string last_login_time { get; set; }
+        /// <summary>
+        /// org_id
         /// </summary>		
-                public int org_id{ get; set; }     
-		/// <summary>
-		/// role_id
+        public int org_id { get; set; }
+        /// <summary>
+        /// updatedAt
         /// </summary>		
-                public int role_id{ get; set; }     
-		/// <summary>
-		/// updatedAt
+        public DateTime updatedAt { get; set; }
+        /// <summary>
+        /// createdAt
         /// </summary>		
-                public DateTime updatedAt{ get; set; }     
-		/// <summary>
-		/// createdAt
+        public DateTime createdAt { get; set; }
+        /// <summary>
+        /// isvalid
         /// </summary>		
-                public DateTime createdAt{ get; set; }     
-		/// <summary>
-		/// isvalid
-        /// </summary>		
-                public bool isvalid{ get; set; }     
-		   
-	}
+        public bool isvalid { get; set; }
+
+        public string roleids { get; set; }
+
+    }
 }
 

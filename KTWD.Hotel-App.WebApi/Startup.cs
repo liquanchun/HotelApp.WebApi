@@ -35,6 +35,11 @@ namespace KTWD.Hotel_App.WebApi
 
             // Add framework services.
             services.AddMvc();
+
+            services.AddCors(options => options.AddPolicy("AllowWebApp",
+                                        builder => builder.AllowAnyMethod()
+                                                          .AllowAnyHeader()
+                                                          .AllowAnyOrigin()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,8 +47,9 @@ namespace KTWD.Hotel_App.WebApi
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
+            app.UseErrorHandling();
             app.UseMvc();
+            app.UseCors("AllowWebApp");
         }
     }
 }
