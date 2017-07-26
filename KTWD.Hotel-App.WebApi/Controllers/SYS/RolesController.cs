@@ -52,11 +52,11 @@ namespace KTWD.Hotel_App.WebApi.Controllers.SYS
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public async Task Delete(int id)
+        public void Delete(int id)
         {
             var result = _SysRoleService.DeleteRole(id);
             var data = Encoding.UTF8.GetBytes(result);
-            await Response.Body.WriteAsync(data, 0, data.Length);
+            Response.Body.WriteAsync(data, 0, data.Length);
         }
     }
 }

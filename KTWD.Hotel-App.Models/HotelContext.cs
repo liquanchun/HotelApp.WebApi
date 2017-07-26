@@ -21,7 +21,7 @@ namespace KTWD.Hotel_App.Models
         public DbSet<sys_role_function> SysRoleFunctions { get; set; }
         public DbSet<sys_role_menu> SysRoleMenus { get; set; }
         public DbSet<sys_role_user> SysRoleUsers { get; set; }
-        //public DbSet<user_access_log> UserAccessLogs { get; set; }
+        public DbSet<user_access_log> UserAccessLogs { get; set; }
         //public DbSet<user_login_log> UserLoginLogs { get; set; }
     }
 }
